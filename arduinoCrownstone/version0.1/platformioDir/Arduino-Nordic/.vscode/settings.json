@@ -1,0 +1,6 @@
+{
+    "terminal.integrated.env.linux": {
+        "PATH": "/home/gmprincep/.platformio/penv/bin:/home/gmprincep/.platformio/penv:/home/gmprincep/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/gmprincep/.platformio/penv/bin",
+        "PLATFORMIO_CALLER": "vscode"
+    }
+}
