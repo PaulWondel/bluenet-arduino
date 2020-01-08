@@ -11,15 +11,8 @@
 extern "C" {
 #endif
 
-/*
-// Create Section type for functions
- #define ARDUINO_HANDLER __attribute__ (( section(".arduino_handlers"))) 
-
-// Test function that will be used to call arduino
-void ARDUINO_HANDLER arduinoCommand();
-*/
-
-typedef void (*arduino_func_t)(const char);
+//typedef void (*arduino_func_t)(const char);
+typedef int (*arduino_func_t)(int);
 
 struct arduino_handler {
 	arduino_func_t f;

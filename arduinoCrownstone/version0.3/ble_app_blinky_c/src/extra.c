@@ -12,15 +12,13 @@
 static void arduinoCommand(const char value){
 	NRF_LOG_INFO("Arduino Command %i", value);
 }
-*/
-/*
-static void crownstoneCommand(const char value) {
-	NRF_LOG_INFO("Crownstone command %i", value);
-}*/
-
-static void arduinoCommand(const int value){
-	//return value;
-}
 
 REGISTER_ARDUINO_HANDLER(arduinoCommand);
+*/
+
+static int giveValue(int value){
+	return value;
+}
+
+REGISTER_ARDUINO_HANDLER(giveValue);
 
