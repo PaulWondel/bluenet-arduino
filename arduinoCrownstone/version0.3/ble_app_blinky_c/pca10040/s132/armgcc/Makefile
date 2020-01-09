@@ -207,6 +207,7 @@ INC_FOLDERS += \
   $(SDK_ROOT)/components/libraries/stack_guard \
   $(SDK_ROOT)/components/libraries/log/src \
   $(PROJ_DIR)/include \
+  $(PROJ_DIR)/ \
 
 # Libraries common to all targets
 LIB_FILES += \

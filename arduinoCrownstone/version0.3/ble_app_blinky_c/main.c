@@ -507,25 +507,14 @@ static void idle_state_handle(void)
 	nrf_pwr_mgmt_run();
 }
 
-// Arduino command in other binary
-//struct arduino_handler arduinoCommand;
-//strcpy(void arduinoCommand.f, void arduinoCommand());
-//strcpy(arduinoCommand.name, "arduinoCommand()");
+void init(void){
 
-int main(void)
-{
 	// Initialize.
-	log_init();
-	timer_init();
-	leds_init();
-	buttons_init();
-	power_management_init();
-	ble_stack_init();
-	scan_init();
-	gatt_init();
-	db_discovery_init();
-	lbs_c_init();
 
+
+}
+
+void loop(void){
 	// Start execution.
 	NRF_LOG_INFO("Blinky CENTRAL example started.");
 	//arduino();
@@ -534,10 +523,29 @@ int main(void)
 	// Turn on the LED to signal scanning.
 	bsp_board_led_on(CENTRAL_SCANNING_LED);
 
-
 	// Enter main loop.
 	for (;;)
 	{
 		idle_state_handle();
 	}
+}
+
+int main(void)
+{
+
+	init();	
+	
+	log_init(); // conflict with bluenet
+	timer_init(); // conflict with bluenet
+	leds_init(); // no conflict 
+	buttons_init(); // no conflict
+	power_management_init(); // no conflict
+	ble_stack_init(); // conflict with bluenet
+	scan_init(); // no conflict with bluenet
+	gatt_init();
+	db_discovery_init();
+	lbs_c_init();
+	
+	loop();
+
 }
