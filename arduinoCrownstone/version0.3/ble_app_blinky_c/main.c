@@ -504,30 +504,33 @@ static void gatt_init(void)
 static void idle_state_handle(void)
 {
 	NRF_LOG_FLUSH();
-	nrf_pwr_mgmt_run();
 }
 
 void init(void){
 
 	// Initialize.
+	leds_init(); // no conflict 
+	buttons_init(); // no conflict
+	power_management_init(); // no conflict
+	scan_init(); // no conflict with bluenet
+	nrf_pwr_mgmt_run(); // no conflict with bluenet
+	gatt_init(); // no conflict with bluenet
+	db_discovery_init(); // no conflict with bluenet
 
 
 }
 
 void loop(void){
 	// Start execution.
-	NRF_LOG_INFO("Blinky CENTRAL example started.");
+//	NRF_LOG_INFO("Blinky CENTRAL example started.");
 	//arduino();
-	scan_start();
+//	scan_start(); // conflict with bluenet
 
 	// Turn on the LED to signal scanning.
-	bsp_board_led_on(CENTRAL_SCANNING_LED);
+	bsp_board_led_on(CENTRAL_SCANNING_LED); // no conflict with bluenet
 
 	// Enter main loop.
-	for (;;)
-	{
-		idle_state_handle();
-	}
+		idle_state_handle(); // no conflict with bluenet
 }
 
 int main(void)
@@ -542,10 +545,14 @@ int main(void)
 	power_management_init(); // no conflict
 	ble_stack_init(); // conflict with bluenet
 	scan_init(); // no conflict with bluenet
-	gatt_init();
-	db_discovery_init();
-	lbs_c_init();
+	nrf_pwr_mgmt_run(); // no conflict with bluenet
+	gatt_init(); // no conflict with bluenet
+	db_discovery_init(); // no conflict with bluenet
+	lbs_c_init(); // conflict with bluenet
 	
 	loop();
+	for (;;)
+	{
+	}
 
 }

@@ -17,7 +17,7 @@ static void arduinoCommand(const char value){
 
 //REGISTER_ARDUINO_HANDLER(arduinoCommand);
 
-
+/*
 static int giveValue(int value){
 	return value;
 }
@@ -28,7 +28,7 @@ static int sumValue(int value){
 	value=value+value;
 	return value;
 }
-
+*/
 static int init_blinky(void){
 	init();
 	return 0;
@@ -45,12 +45,12 @@ static int mainLoop(){
 * 1 - No case executed in switch case
 */
 
-static int arduinoSelect(int option, int value){
+static int arduinoSelect(int option){//, int value){
 	switch (option){
-		case 1: return giveValue(value); break;
-		case 2: return sumValue(value); break; 
-		case 3: return init_blinky(); break;
-		case 4: return mainLoop(); break;
+//		case 1: return giveValue(value); break;
+//		case 2: return sumValue(value); break; 
+		case 1: return init_blinky(); break;
+		case 2: return mainLoop(); break;
 		default: return 1;
 	}
 }
