@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://twitter.com/CrownstoneRocks">
+  <a href="https://github.com/crownstone/bluenet">
     <img src="https://img.shields.io/badge/Github-Crownstone/bluenet-blue" alt="Github">
   </a>
   <a href="http://crownstone.github.io/bluenet/">
