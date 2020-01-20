@@ -25,4 +25,9 @@
 
 This repo contains the arduino files for the arduino compatiblility for the bluenet firmware van Crownstone. Bluenet is the firmware on the Crownstone power outlets. It allows you to build smart home apps using presence and proximity of people with smartphones and wearables. http://crownstone.rocks
 
-For closed issues from before this repo go to the forked bluenet repository: [PaulWondel:bluenet/issues](https://github.com/PaulWondel/bluenet/issues?q=is%3Aissue+is%3Aclosed)
+<p align="left">
+  For closed issues from before this repo go to the forked bluenet repository:
+  <a href="https://github.com/PaulWondel/bluenet/issues?q=is%3Aissue+is%3Aclosed">
+    <img src="https://img.shields.io/badge/Issues-PaulWondel/bluenet-blue" alt="Issues">
+  </a>
+</p>
