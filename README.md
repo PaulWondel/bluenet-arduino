@@ -19,6 +19,9 @@
   <a href="https://twitter.com/CrownstoneRocks">
     <img src="https://img.shields.io/badge/Twitter-CrownstoneRocks-blue" alt="Twitter">
   </a>
+  <a href="http://crownstone.rocks">
+    <img src="https://img.shields.io/badge/Site-crownstone.rocks-green" alt="Site">
+  </a>
 </p>
 
 <br>
@@ -28,6 +31,6 @@ This repo contains the arduino files for the arduino compatiblility for the blue
 <p align="left">
   For closed issues from before this repo go to the forked bluenet repository:
   <a href="https://github.com/PaulWondel/bluenet/issues?q=is%3Aissue+is%3Aclosed">
-    <img src="https://img.shields.io/badge/Issues-PaulWondel/bluenet-blue" alt="Issues">
+    <img src="https://img.shields.io/badge/Issues-PaulWondel/bluenet-red" alt="Issues">
   </a>
 </p>
