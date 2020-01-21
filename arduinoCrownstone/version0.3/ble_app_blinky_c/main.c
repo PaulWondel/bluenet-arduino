@@ -511,6 +511,11 @@ void init(void){
 	// Initialize.
 	leds_init(); // no conflict 
 	buttons_init(); // no conflict
+	power_management_init(); // no conflict
+	scan_init(); // no conflict with bluenet
+	nrf_pwr_mgmt_run(); // no conflict with bluenet
+	gatt_init(); // no conflict with bluenet
+	db_discovery_init(); // no conflict with bluenet
 
 
 }
@@ -519,7 +524,7 @@ void loop(void){
 	// Start execution.
 //	NRF_LOG_INFO("Blinky CENTRAL example started.");
 	//arduino();
-//	scan_start(); // conflict with bluenet
+	scan_start(); // conflict with bluenet
 
 	// Turn on the LED to signal scanning.
 	bsp_board_led_on(CENTRAL_SCANNING_LED); // no conflict with bluenet
@@ -548,6 +553,7 @@ int main(void)
 	loop();
 	for (;;)
 	{
+		idle_state_handle(); // no conflict with bluenet
 	}
 
 }

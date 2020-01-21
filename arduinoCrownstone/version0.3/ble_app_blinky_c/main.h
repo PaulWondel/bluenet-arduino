@@ -51,24 +51,16 @@
 void init(void);
 void loop(void);
 
-/*
-static void leds_init(void);
 
-static void scan_start(void);
+void leds_init(void);
+void scan_start(void);
+void ble_stack_init(void);
+void buttons_init(void);
+void power_management_init(void);
+void scan_init(void);
+void gatt_init(void);
+void idle_state_handle(void);
 
-static void ble_stack_init(void);
+void scan_start(void); // conflict with bluenet
+void idle_state_handle(void); // no conflict with bluenet
 
-static void buttons_init(void);
-
-static void log_init(void);
-
-static void timer_init(void);
-
-static void power_management_init(void);
-
-static void scan_init(void);
-
-static void gatt_init(void);
-
-static void idle_state_handle(void);
-*/
